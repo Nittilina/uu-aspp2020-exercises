@@ -1,0 +1,14 @@
+3a.
+
+The element-wise multiplication and accumulation of this into the final matrix takes the longest time, and is probably the part that should be optimised first.
+
+The memory usage seems to be quite evenly spread over the whole script.
+
+3b.
+
+Line 52, where the factorisation is made, is the line requiring the longest time, and should therefore be optimised for speed first.
+
+Again, the memory seems to be quite evenly spread.
+
+3c.
+Changing the matrices into numpy arrays and making use of how their elements then may be treated, we can optimise the last lines in multmat (line 33). These lines went from taking 3005222 and 4919256 microseconds, to taking 82234 ms, that is, 96 times faster.
